@@ -1,6 +1,5 @@
 package ImageSharing;
 
-//import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -21,7 +20,7 @@ public class Client {
             byte[] imageData = Files.readAllBytes(imagePath);
 
             // Connect to the server
-            Socket socket = new Socket("localhost", 4123);
+            Socket socket = new Socket("localhost", 4312);
 
             // Get the output stream to send data to the server
             OutputStream outputStream = socket.getOutputStream();

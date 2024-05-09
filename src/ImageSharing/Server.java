@@ -12,7 +12,7 @@ public class Server {
         System.out.println("\t\t Image Sharing Server");
         System.out.println("\t\t=======================");
 
-        try (ServerSocket serverSocket = new ServerSocket(4123)) {
+        try (ServerSocket serverSocket = new ServerSocket(4312)) {
             System.out.println("Waiting for client connection...");
 
             while (true) {
