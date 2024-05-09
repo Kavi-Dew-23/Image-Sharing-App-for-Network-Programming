@@ -8,11 +8,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
+	
+	static int port = 6060;
+	
     public static void main(String[] args) {
         System.out.println("\t\t Image Sharing Server");
         System.out.println("\t\t=======================");
 
-        try (ServerSocket serverSocket = new ServerSocket(4312)) {
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Waiting for client connection...");
 
             while (true) {
@@ -30,7 +33,7 @@ public class Server {
                 buffer.flush();
 
                 byte[] imageData = buffer.toByteArray();
-                FileOutputStream outputStream = new FileOutputStream("F:\\receivedimage1.jpg");
+                FileOutputStream outputStream = new FileOutputStream("F:\\receivedimage2.jpg");
                 outputStream.write(imageData);
 
                 System.out.println("Image received and saved successfully.");

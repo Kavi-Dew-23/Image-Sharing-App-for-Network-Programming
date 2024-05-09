@@ -8,6 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Client {
+	
+	static int port = 6060;
+	
     public static void main(String[] args) {
         System.out.println("\t\t Image Sharing Client");
         System.out.println("\t\t=======================");
@@ -20,7 +23,7 @@ public class Client {
             byte[] imageData = Files.readAllBytes(imagePath);
 
             // Connect to the server
-            Socket socket = new Socket("localhost", 4312);
+            Socket socket = new Socket("localhost", port); // creating the Client Socket
 
             // Get the output stream to send data to the server
             OutputStream outputStream = socket.getOutputStream();
